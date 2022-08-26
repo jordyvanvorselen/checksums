@@ -16,7 +16,7 @@ jobs:
         with:
           virtualenvs-create: false
       - name: Install dependencies
-        run: python -m poetry install
+        run: poetry install
       - name: Run flake8
         run: flake8 ${{ github.workspace }}
       - uses: psf/black@stable
