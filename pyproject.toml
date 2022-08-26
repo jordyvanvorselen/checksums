@@ -1,19 +1,20 @@
 [tool.poetry]
 name = "checksums"
-version = "0.1.0"
+version = "0.1.2"
 description = "Python REST API to upload large files and generate checksums"
 authors = ["Jordy van Vorselen <jordyvanvorselen@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "3.10.5"
 behave = "^1.2.6"
 fastapi = "^0.80.0"
 uvicorn = {extras = ["standard"], version = "^0.18.3"}
 black = "^22.6.0"
 flake8 = "^5.0.4"
+requests = "^2.28.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "^7.1.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
