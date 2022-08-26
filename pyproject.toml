@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "checksums"
-version = "0.1.1"
+version = "0.1.2"
 description = "Python REST API to upload large files and generate checksums"
 authors = ["Jordy van Vorselen <jordyvanvorselen@gmail.com>"]
 
