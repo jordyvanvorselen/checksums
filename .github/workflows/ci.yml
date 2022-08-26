@@ -15,3 +15,7 @@ jobs:
       - name: Run flake8
         run: poetry run flake8
       - uses: psf/black@stable
+      - name: Run unit tests
+        run: poetry run pytest
+      - name: Run feature tests
+        run: poetry run behave
