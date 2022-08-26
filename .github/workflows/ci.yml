@@ -1,8 +1,5 @@
 name: Continuous Integration
-on:
-  push:
-    paths:
-      - '**/*.py'
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
