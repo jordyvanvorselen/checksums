@@ -4,4 +4,5 @@ Feature: As an API user
 
   Scenario: Opening the API documentation
       When I open the API documentation
-      Then the API documentation will be returned
+      Then the response code should be 200
+      And the API documentation will be returned

@@ -1,11 +1,10 @@
 from behave import fixture, use_fixture
-from fastapi import FastAPI
+from checksums.checksums import app
 from fastapi.testclient import TestClient
 
 
 @fixture
 def client(context):
-    app = FastAPI()
     client = TestClient(app)
 
     context.client = client
