@@ -3,16 +3,11 @@ Feature: As an API user
   So that I can see if files have changed
 
   Scenario: Calling the checksum generation endpoint
-      When I do a POST request to /checksums with body
-        """
-        {
-          "test": "kek"
-        }
-        """
+      When I do a POST request to /checksums with file test_file
       Then the response code should be 200
       And the JSON response should be
         """
         {
-          "checksum": "a3423j4jk23h423bh4324jb23h4234kj234"
+          "checksum": "824ae91e13ce0834e6dba82b32e342ac"
         }
         """

@@ -1,8 +1,11 @@
-from fastapi import FastAPI
+import hashlib
+from fastapi import FastAPI, UploadFile
 
 app = FastAPI()
 
 
 @app.post("/checksums")
-async def checksums():
-    return {"checksum": "a3423j4jk23h423bh4324jb23h4234kj234"}
+async def checksums(file: UploadFile):
+    file_content = await file.read()
+    checksum = hashlib.md5(file_content).hexdigest()
+    return {"checksum": checksum}
